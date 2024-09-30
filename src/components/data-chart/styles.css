@@ -1,0 +1,22 @@
+.graphs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  margin-top: 1rem;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.type-filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
