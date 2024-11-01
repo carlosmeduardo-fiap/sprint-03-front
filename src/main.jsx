@@ -7,6 +7,7 @@ import {
 
 import MetricsPage from './pages/metrics';
 import SignInPage from './pages/sign-in';
+import ForgotPasswordPage from './pages/forgot-password';
 
 import './index.css'
 
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/auth/sign-in",
     element: <SignInPage />,
+  },
+  {
+    path: "/auth/forgot-password",
+    element: <ForgotPasswordPage />,
   },
 ]);
 

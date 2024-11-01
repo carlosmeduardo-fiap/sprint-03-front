@@ -1,8 +1,33 @@
-# React + Vite
+Projeto consiste em uma visualização de métricas sobre temperatura e umidade.
+Possui autenticação e RDB.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## :information_source: Instalação e uso
 
-Currently, two official plugins are available:
+Para clonar e executar esta aplicação, você precisará do [Git](https://git-scm.com/) e [NodeJS](https://nodejs.org/). A partir de sua linha de comando:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+# Clone este repositório
+$ git clone https://github.com/carlosmeduardo-fiap/sprint-04-front
+
+# Entre no repositório
+$ cd sprint-04-front
+
+# Instale as dependências
+$ npm install
+
+# Rode a aplicação
+$ npm run dev
+
+# Navegue para http://localhost:5173
+# A aplicação será recarregada automaticamente se você alterar qualquer um dos arquivos.
+# OBS: Você precisa estar com a API iniciada. 
+```
+
+## 🛠️ Tecnologias
+
+Esse projeto foi desenvolvido usando as seguintes tecnologias:
+
+- [React.js](https://pt-br.reactjs.org)
+- [Vite](https://vitejs.dev/)
+- [React Router](https://reactrouter.com)
+- [Chart.js](https://www.chartjs.org/)

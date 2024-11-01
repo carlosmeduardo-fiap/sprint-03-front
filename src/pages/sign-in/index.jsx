@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './styles.css';
 
@@ -11,6 +11,7 @@ function SignIn() {
 
     const email = event.target.email.value;
     const password = event.target.password.value;
+    const role = event.target.role.value;
 
     if (!email) {
       alert('E-mail é obrigatório');
@@ -21,7 +22,12 @@ function SignIn() {
       alert('Senha é obrigatória');
       return;
     }
-    
+
+    if (!role) {
+      alert('Cargo é obrigatório');
+      return;
+    }
+
     try {
       const response = await fetch('http://localhost:3000/auth/sign-in', {
         method: 'POST',
@@ -30,7 +36,8 @@ function SignIn() {
         },
         body: JSON.stringify({
           email,
-          password
+          password,
+          role,
         })
       });
 
@@ -72,7 +79,25 @@ function SignIn() {
           <input type="password" name="password" />
         </div>
 
+        <div className='form-field'>
+          <label>Cargo:</label>
+
+          <div>
+            <div>
+              <input type="radio" name="role" value="USER" defaultChecked />
+              <label>Usuário</label>
+            </div>
+
+            <div>
+              <input type="radio" name="role" value="ADMIN" />
+              <label>Administrador</label>
+            </div>
+          </div>
+        </div>
+
         <button type="submit">Entrar</button>
+
+        <Link to="/auth/forgot-password">Esqueceu sua senha?</Link>
       </form>
     </div>
   )
